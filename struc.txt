@@ -1,0 +1,42 @@
+core/
+├── animations/
+│   └── __init__.py
+│   └── main_Anim.py
+├── widgets/
+│   └── __init__.py
+│   └── header.py
+│   └── loader.py
+│   └── chat_bubble.py
+├── model_llm/
+│   └── __init__.py
+│   └── ollama_llm.py
+├── interface/
+│   └── home/
+|	│   └── home_main.py
+│   └── navigate/
+|	│   └── navi_main.py
+│   └── __init__.py
+├── providers/
+│   └── __init__.py
+│   └── screnn_stack.py
+main_app.py                      
+requirements.txt
+
+import flet as ft
+
+class AnimationHelper:
+
+    @staticmethod
+    def toggle_shrink(control: ft.Control, event: ft.ControlEvent):
+        if not hasattr(control, "_is_shrunk"):
+            control._is_shrunk = False
+        
+        if control._is_shrunk:
+            control._is_shrunk = False
+            control.scale = ft.transform.Scale(1, alignment=ft.alignment.center_right)
+        else:
+            control._is_shrunk = True
+            control.scale = ft.transform.Scale(0.65, alignment=ft.alignment.center_right)
+        
+        control.update()
+
