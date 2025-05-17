@@ -82,8 +82,8 @@ A modern AI-powered chat interface built with [Flet UI](https://flet.dev/), inte
 2. **Clone the repository:**
 
   ```bash
-  git clone https://github.com/8syncdev/ai-agent-chat.git
-  cd ai-agent-chat
+  git clone https://github.com/paht2005/mini-AI-Agent-Chatbot-with-Flet.git
+  cd mini-AI-Agent-Chatboit-with-Flet
   ```
 3. **Create and activate a virtual environment:**
   ```bash
