@@ -77,7 +77,7 @@ A modern AI-powered chat interface built with [Flet UI](https://flet.dev/), inte
 
 1. **Prerequisites:**
 - Python 3.8+
-- [Ollama](https://ollama.ai/) installed and running locally
+
 
 2. **Clone the repository:**
 
