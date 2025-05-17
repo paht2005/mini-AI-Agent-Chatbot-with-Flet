@@ -1,4 +1,4 @@
-# 🤖 AI Agent Chat — Powered by Ollama, LangChain & Flet (Python)
+# 🤖 AI Agent Chat — Powered by Ollama, LangChain with Flet UI (Python)
 
 A modern AI-powered chat interface built with [Flet UI](https://flet.dev/), integrated with [Ollama](https://ollama.ai/) LLMs and enhanced by [LangChain](https://www.langchain.com/). This project demonstrates a complete conversational AI agent with interactive animations, context-aware prompting, and real-time user interaction — all running locally.
 
@@ -10,61 +10,107 @@ A modern AI-powered chat interface built with [Flet UI](https://flet.dev/), inte
 ## 🗂️ Table of Contents
 
 - [✨ Features](#-features)
-- [🗂️ Repository Structure](#️-repository-structure)
+- [🗂️ Project Structure](#️-project-structure)
 - [⚙️ Installation](#️-installation)
-- [🎯 Usage](#-usage)
+- [🎯 Usage Guide](#-usage-guide)
+- [🧰 Built With](#-built-with)
 - [📄 License](#-license)
 - [🤝 Contributing](#-contributing)
 - [🧠 Acknowledgements](#-acknowledgements)
 - [⭐ Future Enhancements](#-future-enhancements)
+- [📬 Contact](#-contact)
 
 ---
-
 ## ✨ Features
 
-- **Animal Sound Simulator:** Simulate the sounds of various animals using OOP concepts.
-- **Bank Account Simulator:** Manage user accounts with functionalities like balance checking, depositing, and withdrawing.
-- **Employee Management System:** Create and manage employee records with functionalities like adding and updating personal and professional information.
-- **Inventory Management System:** Manage inventory items, track quantities, and perform operations like adding and removing items.
-- **Library Management System:** Manage a collection of books, borrowing and returning books, and tracking due dates.
-- **Secure User Profile App:** Create and manage user profiles with secure login and password management.
-- **Mini ATM Machine App:** Simulate an ATM machine with functionalities like account creation, PIN validation, and transaction processing.
+### 🧑‍💻 User Interface
+- Responsive and modern UI built with **Flet**
+- Smooth animations (fade, slide, scale)
+- Collapsible side navigation with toggle
+- Chat interface using bubble-style messages
+- User and AI avatars for a clean experience
+
+### 🤖 AI Integration
+- Built-in **Ollama LLM** (`qwen2.5-coder:1.5b`)
+- Intelligent prompt formatting using **LangChain**
+- In-memory caching for improved response time
+- Response formatting criteria:
+  - Accurate and complete information
+  - Context-aware and easy to understand
+  - Grammatically correct and natural phrasing
+
+### 💬 Chat Functionality
+- Real-time message updates and streaming
+- Typing/loading animation for AI responses
+- Send message via Enter key or Send button
+- Input box with emoji icon and placeholder
+- Auto-scroll to latest message on update
+
+### 🧱 Code Structure
+- Modular, component-based project structure
+- Clear separation of UI, AI logic, and state management
+- Uses modern design patterns
+- Fully commented and formatted codebase
 
 ---
 
-## 🗂️ Repository Structure
+## 🗂️ Project Structure
 ```
-├── Animal_Sound_Simulator/ # Folder for Animal Sound Simulator project
-├── Bank_Account_Simulator/ # Folder for Bank Account Simulator project
-├── Employee_Management_System/ # Folder for Employee Management System project
-├── Inventory_Management_System/ # Folder for Inventory Management System project
-├── Library_Management_System/ # Folder for Library Management System project
-├── Secure_UserProfile_App/ # Folder for Secure UserProfile App project
-├── miniATM_Machine_App/ # Folder for Mini ATM Machine App project
-└── README.md # Project documentation
+├── core/
+│ ├── animations/ # Animation helpers                           
+│ ├── widegets/ # Reusable UI elements                            
+│ ├── model_llm/ # LLM integration and prompt templates                      
+│ ├── providers/ # State and screen management                     
+│ └── interface/ # Main screens and layout views                               
 └── LICENSE
+└── README.md                 # Project documentation file.
+└── demo.png
+└── requirements-chatbot # Python dependences
+└── main_app.py
+└── struc.txt
+
 
 ```
 ---
 
 ## ⚙️ Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/paht2005/some_Object-Oriented_miniProjects.git
-   cd some_Object-Oriented_miniProjects
+1. **Prerequisites:**
+- Python 3.8+
+- [Ollama](https://ollama.ai/) installed and running locally
+
+2. **Clone the repository:**
+
+  ```bash
+  git clone https://github.com/8syncdev/ai-agent-chat.git
+  cd ai-agent-chat
+  ```
+3. **Create and activate a virtual environment:**
+  ```bash
+  python -m venv venv
+  source venv/bin/activate  # Windows: venv\Scripts\activate
+  ```
+
+4. **Install required packages:**
+  ```bash
+   pip install -r requirements-chatbot.txt
    ```
-2. **Run the respective project scripts:**
-- For example, to run the Mini ATM Machine App:
+5. **Run the app:**
    ```bash
-   cd miniATM_Machine_App
-   python3 miniATM_machine.py
+   python main_app.py # or python3 main_app.py
    ```
 ---
-## 🎯 Usage
-- Choose any project from the repository to run.
-- Follow the interactive prompts in each project to simulate the functionalities of the system.
-- Each project contains basic functionality with additional enhancements possible based on the project.
+## 🎯 Usage Guide
+- Type your question in the text box at the bottom of the screen.
+- Press Enter or click the Send button.
+- Wait for a response (AI typing animation shown).
+- Use the side menu to toggle navigation panel.
+
+---
+## 🧰 Built With
+- **Flet** – Python UI framework based on Flutter
+- **LangChain** – Prompt engineering and LLM orchestration
+- **Ollama** – Lightweight, local LLM deployment
 
 ---
 ## 📄 License
@@ -77,15 +123,16 @@ Feel free to:
 - Submit pull requests
 - Report bugs
 - Suggest new features
-Contact for work: **Nguyễn Công Phát** – congphatnguyen.work@gmail.com
----
-## 🧠 Acknowledgements
-- **Python:** For providing a simple yet powerful language for OOP projects.
-- **GitHub:** For hosting this open-source project.
-- **Streamlit/Tkinter:** Developing a user interface (UI) using Tkinter or Streamlit frameworks.
+
 ---
 ## ⭐ Future Enhancements
-- **Modularization:** Break down each project into more granular modules for easier maintenance and enhancement.
-- **Advanced Features:** Add advanced features like database integration or real-time updates for certain projects (e.g., the Inventory Management System).
-- **Web-based UIs:** Transform the projects into web-based applications with Flask or Django.
-- **Cross-platform Compatibility:** Make the applications compatible across different operating systems and devices.
+- Support for switching between multiple LLMs (e.g., Mistral, LLaMA)
+- Add memory and context window for longer conversations
+- Export chat history as PDF or Markdown
+- Add user authentication for personalized AI agents
+- Light/Dark theme toggle
+
+--- 
+## 📬 Contact
+Contact for work: **Nguyễn Công Phát** – congphatnguyen.work@gmail.com
+
