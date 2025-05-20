@@ -1,4 +1,4 @@
-
+# copyright [2025] [Phat Nguyen Cong] (Github: https://github.com/paht2005)
 import flet as ft
 from core.widgets.header import AppHeader
 from core.providers.screen_stack import ScreenManager

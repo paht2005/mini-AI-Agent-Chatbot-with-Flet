@@ -1,3 +1,5 @@
+# copyright [2025] [Phat Nguyen Cong] (Github: https://github.com/paht2005)
+
 from langchain_ollama import OllamaLLM
 from langchain.prompts import PromptTemplate
 from langchain.chains.llm import LLMChain
